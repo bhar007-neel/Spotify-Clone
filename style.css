@@ -43,3 +43,68 @@ body{
 .home{
    
 }
+
+.heading{
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    font-weight: bold;
+    padding: 23px 14px;
+    padding-top: 14px;
+    align-items: center;
+    font-size: 13px;
+    
+
+}
+
+.heading img{
+    width: 30px;
+}
+
+.Library{
+    min-height: 80vh;
+    position: relative;
+}
+
+.footer {
+    display: flex;
+    font-size: 10px;
+    color: grey;
+    gap: 13px;
+    position: absolute;
+    bottom: 0;
+    
+
+}
+
+.footer a{
+    color: grey;
+}
+
+.right{
+    margin: 16px 0 ;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+    background-color: rgb(34,34,34);
+}
+
+.header > *{
+    padding: 20px;
+}
+
+.spotifyPlaylists{
+       padding: 16px;
+}
+
+.spotifyPlaylists .Card{
+    width: 200px;
+
+}
+
+.Card img{
+    width: 100%;
+    object-fit: contain;
+}
