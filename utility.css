@@ -20,6 +20,7 @@
 
 .invert{
     filter: invert(1);
+    /* background-color: white; */
 }
 
 .bg-grey{
@@ -34,4 +35,35 @@
 }
 .p-1{
     padding: 10px;
+}
+
+/* WebKit Browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #2b2b2b; /* Background of the scrollbar track */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #4a4a4a; /* Color of the scrollbar thumb */
+    border-radius: 10px;
+    border: 2px solid #2b2b2b; /* Optional: gives padding around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #646464; /* Hover effect for the scrollbar thumb */
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin; /* Makes the scrollbar thinner */
+    scrollbar-color: #4a4a4a #2b2b2b; /* thumb color, track color */
+}
+
+/* Edge, IE */
+* {
+    -ms-overflow-style: -ms-autohiding-scrollbar; /* Auto-hide scrollbar in IE/Edge */
 }

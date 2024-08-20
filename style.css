@@ -1,37 +1,43 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
-*{ 
+* {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
 }
-body{
+
+body {
     /* background-color: black;
     color: white; */
 }
-.border{
+
+.border {
     border: 2px solid red;
 }
-.flex{
+
+.flex {
     display: flex;
 }
-.justify-center{
+
+.justify-center {
     justify-content: center;
 }
-.items-center{
+
+.items-center {
     align-items: center;
 }
-.left{
+
+.left {
     width: 25vw;
     padding: 10px;
 }
-.right{
+
+.right {
     width: 75vw;
 }
 
-.home ul li{
+.home ul li {
     width: 14px;
     list-style: none;
     display: flex;
@@ -40,11 +46,9 @@ body{
     font-weight: bold;
 }
 
-.home{
-   
-}
+.home {}
 
-.heading{
+.heading {
     width: 100%;
     display: flex;
     gap: 15px;
@@ -53,17 +57,19 @@ body{
     padding-top: 14px;
     align-items: center;
     font-size: 13px;
-    
+
+
 
 }
 
-.heading img{
+.heading img {
     width: 30px;
 }
 
-.Library{
+.Library {
     min-height: 80vh;
     position: relative;
+    
 }
 
 .footer {
@@ -73,38 +79,213 @@ body{
     gap: 13px;
     position: absolute;
     bottom: 0;
-    
+    padding: 10px;
+
+
 
 }
 
-.footer a{
+.footer a {
     color: grey;
+
 }
 
-.right{
-    margin: 16px 0 ;
+.right {
+    margin: 16px 0;
+    position: relative;
 }
-.header{
+
+.header {
     display: flex;
     justify-content: space-between;
     gap: 4px;
-    background-color: rgb(34,34,34);
+    background-color: rgb(34, 34, 34);
+
 }
 
-.header > *{
+.header>* {
     padding: 20px;
 }
 
-.spotifyPlaylists{
-       padding: 16px;
+.spotifyPlaylists {
+    padding: 16px;
 }
 
-.spotifyPlaylists .Card{
-    width: 200px;
+.cardContainer {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 5px;
+    overflow-y: scroll;
+    max-height: 70vh;
+}
+
+
+.Card {
+    width: 150px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #252525;
+    position: relative;
 
 }
 
-.Card img{
+.Card>* {
+    padding-top: 8px;
+
+}
+
+.Card img {
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
+
+}
+
+.play {
+    width: 28px;
+    /* Set width and height to create a circle */
+    height: 28px;
+    background-color: #1DB954;
+    /* Green background */
+    border-radius: 50%;
+    /* Makes the div circular */
+    display: flex;
+    padding: 4px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 128px;
+    right: 15px;
+    opacity: 1;
+    transition: all 1s ease-out;
+}
+
+.play svg {
+    width: 60px;
+    /* Adjust the size of the SVG inside the circle */
+    height: 60px;
+    fill: black;
+    /* Change the SVG color to black */
+    display: block;
+}
+
+.buttons>* {
+    margin: 0px 12px
+}
+
+.signupbtn {
+    background-color: black;
+    color: rgb(121, 115, 115);
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background-color: rgb(34, 34, 34);
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+.signupbtn:hover {
+    font-size: 17px;
+    color: white;
+
+}
+
+.loginbtn {
+    background-color: white;
+    border-radius: 21px;
+    color: black;
+    /* font-weight: bold; */
+    padding: 10px;
+    cursor: pointer;
+    width: 79px;
+    font-size: 16px;
+}
+
+.loginbtn:hover {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+
+.playbar {
+    bottom: 30px;
+    position: fixed;
+    background-color: white;
+    width: 70vw;
+    padding: 12px;
+    
+
+
+
+
+}
+
+.songbuttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+
+}
+
+.playbar img {
+    width: 24px;
+    /* Set a fixed width for the SVGs */
+    height: 24px;
+    /* Set a fixed height for the SVGs */
+    fill: black;
+    /* Optional: Set the color of the SVGs */
+
+}
+
+.songlist ul {
+    padding: 0 38px;
+    /* padding-left: 50px;
+    padding-right: 50px; */
+
+}
+
+.songlist ul li {
+    list-style-type: decimal;
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+    padding: 12px 0;
+    border-radius: 5px;
+    border: 1px solid white;
+    margin: 12px 0;
+    width: 120%;
+    justify-content: space-between;
+
+}
+
+.songlist img {
+    width: 24px;
+
+}
+
+.playnow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playnow span {
+    font-size: 15px;
+    width: 64px;
+    padding: 12px;
+
+}
+
+.songlist .info{
+    font-size: 13px;
+    width: 344px;
+}
+
+.songlist{
+    height: 419px;
+    overflow: auto;
+    margin-bottom: 44px;
+    
 }
