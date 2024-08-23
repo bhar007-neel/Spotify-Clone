@@ -1,6 +1,7 @@
 console.log("Let write Javascript")
 let currentSong = new Audio()
 let isPlaying = false;
+let songs;
 
 function secondsToMinutesSeconds(seconds) {
     if (isNaN(seconds) || seconds < 0) {
@@ -60,7 +61,7 @@ const playMusic = (track,pause= false) => {
 async function main() {
     // let currentSong = new Audio();
     // get the ist of all songs
-    let songs = await getSongs()
+    songs = await getSongs()
     playMusic(songs[0],true)
 
 
@@ -133,10 +134,43 @@ async function main() {
         currentSong.currentTime = ((currentSong.duration) * percent) / 100
     })
 
-    // add a event listner for eventburger
+    // add a event listner for hamburger
 
     document.querySelector(".hamburger").addEventListener("click",()=>{
         document.querySelector(".left").style.left ="0"
+    })
+
+    // add a eventListener for close button
+    document.querySelector(".close").addEventListener("click", ()=>{
+        document.querySelector(".left").style.left="-120%"
+    })
+
+    //  Add an event listener to previous and next
+    previous.addEventListener("click",()=>{
+        console.log("Privous clicked")
+        console.log("current song")
+        let index= songs.indexOf(currentSong.src.split("/").slice(-1)[0])
+        console.log(songs,index)
+        if((index-1)>= 0){
+            playMusic(songs[index-1])
+
+        }
+       
+    })
+
+    //  Add an event listener to previous and next
+    next.addEventListener("click",()=>{
+        console.log("next clicked")
+        let index= songs.indexOf(currentSong.src.split("/").slice(-1)[0])
+        console.log(songs,index)
+        if((index+1)< songs.length){
+            playMusic(songs[index +1])
+
+        }
+       
+
+
+    
     })
 
 }
