@@ -144,6 +144,12 @@ body {
 
 }
 
+.Card:hover{
+    background-color: rgb(65, 63, 58);
+    cursor: pointer;
+    --a:1;
+}
+
 .Card>* {
     padding-top: 10px;
 
@@ -170,7 +176,7 @@ body {
     position: absolute;
 
     right: 17px;
-    opacity: 1;
+    opacity: var(--a);
     transition: all 1s ease-out;
     bottom: 88px;
 }
@@ -313,6 +319,10 @@ body {
     width: 344px;
 }
 
+.info div{
+    word-break: break-all;
+}
+
 .songlist {
     height: 419px;
     overflow: auto;
@@ -366,6 +376,15 @@ body {
     content: "neel";
 
 } */
+
+
+
+.volume{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
 
 .abovebar {
     display: flex;
