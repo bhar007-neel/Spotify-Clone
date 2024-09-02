@@ -18,7 +18,7 @@ function secondsToMinutesSeconds(seconds) {
 }
 async function getSongs(folder) {
 
-    let a = await fetch("https://bhar007-neel.github.io/Spotify-Clone/songs/")
+    let a = await fetch("https://github.com/bhar007-neel/Spotify-Clone/tree/master/songs")
     let response = await a.text();
     console.log(response)
 
