@@ -18,7 +18,7 @@ function secondsToMinutesSeconds(seconds) {
 }
 async function getSongs(folder) {
 
-    let a = await fetch("https://bhar007-neel.github.io/Spotify-Clone/")
+    let a = await fetch("https://bhar007-neel.github.io/Spotify-Clone/songs/")
     let response = await a.text();
     console.log(response)
 
@@ -41,9 +41,9 @@ const playMusic = (track, pause = false) => {
     if (!pause) {
         currentSong.play()
     }
-    if (currentSong.src !== "/Spotify-Clone/songs/" + track) {
+    if (currentSong.src !== "/songs/" + track) {
         currentSong.pause(); // Ensure any currently playing audio is stopped
-        currentSong.src = "/Spotify-Clone/songs/" + track;
+        currentSong.src = "/songs/" + track;
     }
 
     // Attempt to play the current song
