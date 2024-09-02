@@ -1,6 +1,7 @@
 Spotify Clone
 
-Overview
+Overview-
+
 This project is a responsive Spotify clone designed to mimic the core features of Spotify's interface. It includes a clean, user-friendly layout and features a playlist display with interactive elements. The application is built using HTML, CSS, and JavaScript, focusing on a responsive design that adapts to various screen sizes.
 
 Features
