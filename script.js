@@ -29,7 +29,7 @@ async function getSongs(folder) {
     for (let index = 0; index < as.length; index++) {
         const element = as[index];
         if (element.href.endsWith(".mp3")) {
-            songs.push(element.href.split("/songs/")[1])
+            songs.push(element.href.split("/Spotify-Clone/songs/")[1])
         }
 
     }
@@ -41,9 +41,9 @@ const playMusic = (track, pause = false) => {
     if (!pause) {
         currentSong.play()
     }
-    if (currentSong.src !== "/songs/" + track) {
+    if (currentSong.src !== "/Spotify-Clone/songs/" + track) {
         currentSong.pause(); // Ensure any currently playing audio is stopped
-        currentSong.src = "/songs/" + track;
+        currentSong.src = "/Spotify-Clone/songs/" + track;
     }
 
     // Attempt to play the current song
