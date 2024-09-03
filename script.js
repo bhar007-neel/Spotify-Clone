@@ -16,37 +16,41 @@ function secondsToMinutesSeconds(seconds) {
 
     return `${formattedMinutes}:${formattedSeconds}`;
 }
-async function getSongs(folder) {
-
-    let a = await fetch("https://github.com/bhar007-neel/Spotify-Clone/tree/master/songs")
-    let response = await a.text();
-    console.log(response)
-
-    let div = document.createElement("div")
-    div.innerHTML = response;
-    let as = div.getElementsByTagName("a")
-    let songs = []
-    for (let index = 0; index < as.length; index++) {
-        const element = as[index];
-        if (element.href.endsWith(".mp3")) {
-            songs.push(element.href.split("/Spotify-Clone/songs/")[1])
+async function getSongs() {
+    try {
+        let response = await fetch("https://bhar007-neel.github.io/Spotify-Clone/songs/");
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
         }
+        let text = await response.text();
+        console.log("Fetched data:", text);
 
+        let div = document.createElement("div");
+        div.innerHTML = text;
+        let as = div.getElementsByTagName("a");
+        let songs = [];
+        for (let index = 0; index < as.length; index++) {
+            const element = as[index];
+            if (element.href.endsWith(".mp3")) {
+                songs.push(element.href.split("https://bhar007-neel.github.io/Spotify-Clone/songs/")[1]);
+            }
+        }
+        console.log("Parsed songs:", songs);
+        return songs;
+    } catch (error) {
+        console.error("Failed to fetch songs:", error);
     }
-    return songs
 }
 
 const playMusic = (track, pause = false) => {
-    // If a different track is selected, stop the current one
     if (!pause) {
-        currentSong.play()
+        currentSong.play();
     }
-    if (currentSong.src !== "/songs/" + track) {
-        currentSong.pause(); // Ensure any currently playing audio is stopped
-        currentSong.src = "/songs/" + track;
+    if (currentSong.src !== "https://bhar007-neel.github.io/Spotify-Clone/songs/" + track) {
+        currentSong.pause();
+        currentSong.src = "https://bhar007-neel.github.io/Spotify-Clone/songs/" + track;
     }
 
-    // Attempt to play the current song
     currentSong.play().then(() => {
         play.src = "pause.svg";
         isPlaying = true;
@@ -54,8 +58,8 @@ const playMusic = (track, pause = false) => {
         console.error("Audio play failed:", error);
     });
 
-    document.querySelector('.songinfo').innerHTML = track
-    document.querySelector('.songtime').innerHTML = "00:00/00:00"
+    document.querySelector('.songinfo').innerHTML = track;
+    document.querySelector('.songtime').innerHTML = "00:00/00:00";
 }
 
 async function main() {
