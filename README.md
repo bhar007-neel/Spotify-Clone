@@ -9,7 +9,7 @@ Responsive Design: The interface adjusts seamlessly to different screen sizes an
 Interactive UI: Includes clickable elements such as playlists and buttons, with hover and active states for improved user interaction.
 Playbar: A functional playbar with controls for previous, play/pause, and next, as well as a volume control slider.
 Future Implementation
-One key feature to be added is dynamic album content. This feature will allow users to click on an album to reveal new songs within it, which can then be played directly from the interface. This will enhance the interactive experience by providing a more dynamic and engaging way to explore music.
+One key feature to be added is dynamic album content. This feature will allow users to click on an album to reveal new songs within it, which can then be played directly from the interface. This will enhance the interactive experience by providing a more dynamic and engaging way to explore music. I was unable to run the file on the github pages and show the music running and showing playlist, i will also work on that in future but by then i also uploaded a video of it running in local host.
 
 Installation
 To run this project locally, follow these steps:
