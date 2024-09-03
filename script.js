@@ -18,7 +18,7 @@ function secondsToMinutesSeconds(seconds) {
 }
 async function getSongs() {
 
-    let a = await fetch('/songs/' )
+    let a = await fetch('/songs/')
     let response = await a.text();
     console.log(response)
 
@@ -170,9 +170,9 @@ async function main() {
     })
 
     //  add an event to volume
-    document.querySelector(".range").getElementsByTagName("input")[0].addEventListener("change",(e)=>{
-        console.log(e,e.target,e.target.value)
-        currentSong.volume= parseInt(e.target.value)/100;
+    document.querySelector(".range").getElementsByTagName("input")[0].addEventListener("change", (e) => {
+        console.log(e, e.target, e.target.value)
+        currentSong.volume = parseInt(e.target.value) / 100;
     })
 
 }
