@@ -18,7 +18,7 @@ function secondsToMinutesSeconds(seconds) {
 }
 async function getSongs(folder) {
 
-    let a = await fetch("https://bhar007-neel.github.io/Spotify-Clone/songs/")
+    let a = await fetch('https://bhar007-neel.github.io/Spotify-Clone/songs/' )
     let response = await a.text();
     console.log(response)
 
@@ -29,7 +29,7 @@ async function getSongs(folder) {
     for (let index = 0; index < as.length; index++) {
         const element = as[index];
         if (element.href.endsWith(".mp3")) {
-            songs.push(element.href.split("/Spotify-Clone/songs/")[1])
+            songs.push(element.href.split("/songs/")[1])
         }
 
     }
