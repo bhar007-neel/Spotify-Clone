@@ -1,5 +1,10 @@
 Spotify Clone
 
+Demo - click on the thumbnail for demo
+
+[![Watch the video](https://img.youtube.com/vi/7wnlA8Tp1zQ/maxresdefault.jpg)](https://youtu.be/7wnlA8Tp1zQ)
+
+
 Overview-
 
 This project is a responsive Spotify clone designed to mimic the core features of Spotify's interface. It includes a clean, user-friendly layout and features a playlist display with interactive elements. The application is built using HTML, CSS, and JavaScript, focusing on a responsive design that adapts to various screen sizes.
